@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "681336313358",
+    "firebase_url": "https://mirea-informatics.firebaseio.com",
+    "project_id": "mirea-informatics",
+    "storage_bucket": "mirea-informatics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681336313358:android:a2037d8710adb7b165ce5f",
+        "android_client_info": {
+          "package_name": "com.mirea.informatics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681336313358-a0unum967nff95bqneo9v11udnkvo6a4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGnvvk9bVVKhHsAqEsc4PKJQmVWPziZBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681336313358-a0unum967nff95bqneo9v11udnkvo6a4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,65 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+    <PreferenceCategory
+        app:title="@string/profile_header"
+        app:iconSpaceReserved="false">
+        <EditTextPreference
+            android:summary="Тебинов Никита Сергеевич"
+            app:iconSpaceReserved="false"
+            app:key="name"
+            app:summary="Тебинов Никита Сергеевич"
+            app:title="@string/name_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="email"
+            app:summary="ivbo0118@gmail.com"
+            app:title="@string/email_title"
+            app:useSimpleSummaryProvider="true" />
+
+            <EditTextPreference
+                app:iconSpaceReserved="false"
+                app:key="group"
+                app:title="@string/group_title"
+                app:summary="ИВБО-01-18"
+                app:useSimpleSummaryProvider="true" />
+
+            <Preference
+                app:iconSpaceReserved="false"
+                app:key="password_btn"
+                app:selectable="true"
+                app:enabled="true"
+                app:title="@string/change_password" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="@string/display_header"
+        app:iconSpaceReserved="false">
+            <ListPreference
+                app:iconSpaceReserved="false"
+                app:key="themePref"
+                app:title="@string/choose_theme"
+                app:defaultValue="default"
+                app:dialogTitle="@string/choose_theme"
+                app:entries="@array/themeListArray"
+                app:entryValues="@array/themeEntryArray"
+                app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="@string/login_header"
+        app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:key="auto_login"
+            app:title="@string/auto_log" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:selectable="true"
+            app:enabled="true"
+            app:key="logout_btn"
+            app:title="@string/logout"/>
+    </PreferenceCategory>
+</PreferenceScreen>

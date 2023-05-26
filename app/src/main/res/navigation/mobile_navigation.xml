@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/startupFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.mirea.informatics.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_book"
+        android:name="com.mirea.informatics.ui.book.BookFragment"
+        android:label="@string/title_book"
+        tools:layout="@layout/fragment_book" />
+
+    <fragment
+        android:id="@+id/navigation_apps"
+        android:name="com.mirea.informatics.ui.apps.AppsFragment"
+        android:label="@string/title_apps"
+        tools:layout="@layout/fragment_apps">
+        <action
+            android:id="@+id/action_navigation_apps_to_solverFragment"
+            app:destination="@id/solverFragment" />
+        <action
+            android:id="@+id/action_navigation_apps_to_testsFragment"
+            app:destination="@id/testsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.mirea.informatics.ui.settings.SettingsFragment"
+        android:label="@string/title_settings">
+        <action
+            android:id="@+id/action_navigation_settings_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_navigation_settings_to_emailFragment"
+            app:destination="@id/emailFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.mirea.informatics.ui.settings.PasswordFragment"
+        android:label="@string/change_password"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/action_passwordFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings"
+            app:enterAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.mirea.informatics.ui.settings.EmailFragment"
+        android:label="@string/change_email"
+        tools:layout="@layout/fragment_email">
+        <action
+            android:id="@+id/action_emailFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.mirea.informatics.ui.login.RegisterFragment"
+        android:label="@string/reg"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mirea.informatics.ui.login.LoginFragment"
+        android:label="@string/login_header">
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="com.mirea.informatics.ui.startup.StartupFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_startup">
+        <action
+            android:id="@+id/action_startupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_startupFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/solverFragment"
+        android:name="com.mirea.informatics.ui.apps.solver.SolverFragment"
+        android:label="@string/app1"
+        tools:layout="@layout/fragment_solver" />
+    <fragment
+        android:id="@+id/navigation_lab"
+        android:name="com.mirea.informatics.ui.lab.LabFragment"
+        android:label="@string/title_lab"
+        tools:layout="@layout/fragment_lab" />
+    <fragment
+        android:id="@+id/testsFragment"
+        android:name="com.mirea.informatics.ui.apps.tests.TestsFragment"
+        android:label="Тестирование"
+        tools:layout="@layout/fragment_tests" />
+</navigation>
